@@ -4,7 +4,7 @@ require("./database")();
 const express = require("express");
 const app = express();
 const cookie_parser = require("cookie-parser");
-const PORT = process.env.BACKEND_PORT || 8000;
+const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
 app.use(cookie_parser());
