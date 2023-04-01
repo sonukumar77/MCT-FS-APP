@@ -4,10 +4,8 @@ require("./database")();
 const express = require("express");
 const app = express();
 const cookie_parser = require("cookie-parser");
-const cors = require("cors");
 const PORT = process.env.BACKEND_PORT || 8000;
 
-app.use(cors());
 app.use(express.json());
 app.use(cookie_parser());
 
