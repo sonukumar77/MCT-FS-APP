@@ -13,6 +13,7 @@ app.use(cookie_parser());
 
 app.get("/", (req, res) => {
   res.status(200).send("<h1>This end points is working. Cool, Happy Learning !! </h1>");
+  return;
 });
 
 app.use("/user", require("./Routes/userRouter"));
