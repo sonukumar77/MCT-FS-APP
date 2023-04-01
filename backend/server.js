@@ -9,6 +9,11 @@ const PORT = process.env.BACKEND_PORT || 8000;
 app.use(express.json());
 app.use(cookie_parser());
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
 app.get("/", (req, res) => {
   res.status(200).send("<h1>This end points is working. Cool, Happy Learning !! </h1>");
   return;
